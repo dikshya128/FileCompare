@@ -1,7 +1,6 @@
 import java.io.File;
 import java.io.IOException;
 import java.util.Scanner;
-
 import org.apache.pdfbox.pdmodel.PDDocument;
 import org.apache.pdfbox.text.PDFTextStripper;
 import org.apache.pdfbox.Loader; 
