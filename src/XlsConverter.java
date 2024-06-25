@@ -1,7 +1,6 @@
 import java.io.FileInputStream;
 import java.io.IOException;
 import java.util.Scanner;
-
 import org.apache.poi.ss.usermodel.Cell;
 import org.apache.poi.ss.usermodel.CellType;
 import org.apache.poi.ss.usermodel.Row;
@@ -43,10 +42,11 @@ public class XlsConverter extends txtFileCompare{
 		     
 		            addNextLine(scanner1,scanner2);
 		            }
+				
 
 			}
 			if (s1.getLastRowNum()!=s2.getLastRowNum()) {
-				System.out.println("These files are different!!");
+				System.out.println("These files are different!! The no. of cells are unequal.");
 				System.exit(0);
 			}
 		    printResult();   
