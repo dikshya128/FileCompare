@@ -1,6 +1,5 @@
 import com.opencsv.CSVReader;
 import com.opencsv.exceptions.CsvValidationException;
-
 import java.io.FileReader;
 import java.io.IOException;
 import java.util.Scanner;
@@ -23,11 +22,11 @@ public class CsvConverter extends txtFileCompare{
             
             printResult();
             
-        } catch (IOException  e) {
-        	System.err.println("The file doesnot exist or is replaced!");
-            e.printStackTrace();
-        }catch(CsvValidationException e) {
+        } catch(CsvValidationException e) {
         	System.err.println("The file doesnot validate the CSV file format!");
+            e.printStackTrace();
+        }catch (IOException  e) {
+        	System.err.println("The file doesnot exist or is replaced!");
             e.printStackTrace();
         }
 	}
@@ -39,13 +38,13 @@ public class CsvConverter extends txtFileCompare{
             while ((line = reader.readNext()) != null) {
                 for (int i=0;i<line.length;i++) {
                 	String field = line[i];
-                    text.append(field).append("\t");
+                    text.append(field+"\n");
                 }
                 text.append("\n");
-	            }
+	        }
             reader.close();
 	        return text.toString();
-	    }
+	}
 
 
 }
